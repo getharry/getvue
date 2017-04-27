@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="./node_modules/._vue@2.2.6@vue/dist/vue.js"></script>
+</head>
+<body>
+	<!-- v-bind:class 指令可以与普通的 class 属性共存，可以绑定返回计算属性，可以被传入数组，style大致也是这样子-->
+	<div id="app">
+		<div v-bind:style="{width:wi,height:hei,border:bor}"></div>
+		<div v-bind:style="[objSize,objStyle]"></div>
+		<div v-if="Math.random() > 0.5">
+		  Now you see me
+		</div>
+		<div v-else>
+		  Now you don't
+		</div>
+		<!-- v-else 元素必须紧跟在 v-if 或者 v-else-if 元素的后面——否则它将不会被识别 -->
+	</div>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				wi: '100px',
+				hei: '100px',
+				bor: '1px solid blue',
+				objSize: {
+					width: '500px',
+					height: '100px'
+				},
+				objStyle: {
+					border: '1px solid green'
+				}
+			}
+		})
+	</script>
+</body>
+</html>
