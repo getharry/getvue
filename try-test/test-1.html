@@ -8,7 +8,7 @@
 <body>
 	<div id="app">
 		<p>{{ message }}</p>
-		<input v-model="message">
+		<input v-model.lazy="message">
 		<button v-on:click="reverseMessage">逆转消息</button>
 	</div>
 
