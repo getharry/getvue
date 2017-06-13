@@ -37,7 +37,13 @@ new Vue({
   }
 })
 ```
-
+- vue模板语法
+```javascript
+//mustache语法不能在HTML属性中使用，应使用v-bind
+```
+- 重新梳理  
+关于vue的兼容性：vue.js不支持IE8及其以下版本。  
+v-for指令：绑定数组。
 
 
 
